@@ -1,0 +1,32 @@
+.controls {
+	overflow: hidden;
+}
+
+.play, .stop, .volume, .pause {
+	width: 25px;
+	height: 25px;
+	border-radius: 90%;
+	float: left;
+	transition: background-image .3s ease;
+}
+
+.play {
+	background-image: url(svg/play-button.svg);
+}
+
+.pause {
+	background-image: url(svg/pause.svg);
+}
+
+.stop {
+	background-image: url(svg/stop.svg);
+}
+
+.volume {
+	/* mute.svg
+	 * speaker-2.svg -> quiet
+	 * speaker-1.svg -> medium
+	 * speaker.svg -> loud
+	 */
+	background-image: url(svg/speaker.svg);
+}
