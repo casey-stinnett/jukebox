@@ -3,15 +3,30 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Jukebox</title>
+	<script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="main.css">
 </head>
 <body>
 	<audio id="music" src="bright.mp3"></audio>
+	<h5 id="song-name"></h5>
 	<div class="controls">
 		<div class="play"></div>
+		<div class="pause"></div>
 		<div class="stop"></div>
-		<div class="volume"></div>
+		<div class="volume-wrapper">
+			<div class="volume"></div>
+			<div id="bar" class="bar vcenter">
+				<div id="handle" class="handle vcenter"></div>
+			</div>
+			<div class="vdown"></div>
+			<div class="vup"></div>
+			<div class="addMusic">
+				<input type="file" value="Add Song">
+			</div>
+		</div>
 	</div>
-	<script src="main.js"></script>
+	<script src="js/draggable.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>

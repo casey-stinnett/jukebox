@@ -2,12 +2,16 @@
 	overflow: hidden;
 }
 
-.play, .stop, .volume, .pause {
+.play, .pause, .stop, .volume, .vup, .vdown {
 	width: 25px;
 	height: 25px;
 	border-radius: 90%;
 	float: left;
 	transition: background-image .3s ease;
+}
+
+.play:hover, .pause:hover, .stop:hover, .volume:hover, .vup:hover, .vdown:hover {
+	cursor: pointer;
 }
 
 .play {
@@ -16,10 +20,29 @@
 
 .pause {
 	background-image: url(svg/pause.svg);
+	display: none;
 }
 
 .stop {
 	background-image: url(svg/stop.svg);
+}
+
+.vup {
+	background-image: url(svg/add.svg);
+}
+
+.vdown {
+	background-image: url(svg/remove.svg);
+}
+
+.volume-wrapper {
+	overflow: hidden;
+	width: 250px;
+	height: 25px;
+}
+
+.volume-wrapper > div {
+	margin-left: 5px;
 }
 
 .volume {
@@ -29,4 +52,29 @@
 	 * speaker.svg -> loud
 	 */
 	background-image: url(svg/speaker.svg);
+	float: left;
+}
+
+.volume-wrapper .bar {
+	width: 50%;
+	height: 5px;
+	background-color: gray;
+	float: left;
+	position: relative;
+}
+
+.volume-wrapper .bar .handle {
+	width: 15px;
+	height: 15px;
+	background: yellow;
+	border-radius: 90%;
+	position: absolute;
+	right: 0;
+}
+
+/*Bootstrap CSS*/
+.vcenter {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 }
