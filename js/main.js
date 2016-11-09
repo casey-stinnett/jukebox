@@ -37,6 +37,7 @@ function Jukebox() {
 	this.volumeUp = function(){
 		if ((this.music.volume + this.volumeStep) < 1) {
 			this.music.volume += this.volumeStep;
+			this.volumeHandle.style.left = (this.volumeHandle.offsetLeft + this.volumeHandleShift) + "px";
 		}else {
 			this.music.volume = 1;
 		}
